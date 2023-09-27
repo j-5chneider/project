@@ -44,10 +44,11 @@ inflation <- inflation_raw %>%
     # calculate date as first day of the quarter 
     date = date(year + dyears() / quarter),
     # strip year of its date format
-    year = year(year)
+    year = year(year)+1000
   ) %>% 
   # only select important variables
   select(age, sex, education, perception, expectation, year, quarter, yyyyqq, date)
+
 
 #----export-inflation---
 inflation_path <- here("data", "processed", "inflation.rds")
