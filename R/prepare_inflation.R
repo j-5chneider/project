@@ -42,7 +42,7 @@ inflation <- inflation_raw %>%
     # last two characters are quarters, convert to number
     quarter = as.numeric(str_sub(yyyyqq, 5, 6)),
     # calculate date as first day of the quarter 
-    date = date(year + dyears() / quarter),
+    date = date(year +1000 + dyears() / quarter),
     # strip year of its date format
     year = year(year)+1000
   ) %>% 
