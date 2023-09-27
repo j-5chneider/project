@@ -1,0 +1,6 @@
+inflation.html: inflation.Rmd data/raw/inflation.rds R/prepare_inflation.R
+	$(RUN1) Rscript -e 'rmarkdown::render("$(WORKDIR)/$<", "all")' $(RUN2)
+
+README.md: README.Rmd
+	$(RUN1) Rscript -e 'rmarkdown::render("$(WORKDIR)/$<", "all")' $(RUN2)
+
