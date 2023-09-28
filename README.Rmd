@@ -21,7 +21,7 @@ The goal of project is to get crazy on reproducibility.
 What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
 ```{r cars}
-summary(cars)
+summary(iris)
 ```
 
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
